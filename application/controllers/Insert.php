@@ -3,8 +3,8 @@ class Insert extends CI_Controller {
 
     public function index()
     {
-        $title='wolodyjowski';
-        $opis= 'historyczny';
+        $title=$_POST['nameform'];
+        $opis= $_POST['descriptionform'];
         $kateg = 2;
         $rok = 2001;
         $napis = 1976;
