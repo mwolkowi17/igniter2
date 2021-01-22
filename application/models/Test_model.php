@@ -30,7 +30,7 @@ class Test_model extends CI_Model {
         return $query->result();
 }
 
-public function insert_movie()
+public function insert_movie($namefunc, $descriptionfunc, $category_idfunc, $yearfunc, $createdfunc)
         {
             $config['hostname'] = 'localhost';
             $config['username'] = 'root';
@@ -48,12 +48,12 @@ public function insert_movie()
             $this->load->database($config);
 
                 //$this->name = $_POST['title']; // please read the below note
-                $this->name = "cos";
-                $this->description  = 'jakis content';
-                $this->category_id = '2';
+                $this->name = $namefunc;
+                $this->description  = $descriptionfunc;
+                $this->category_id = $category_idfunc;
 
-                $this->year = '2002';
-                $this->created = '1976';
+                $this->year = $yearfunc;
+                $this->created = $createdfunc;
 
                 $this->db->insert('movies', $this);
         }
