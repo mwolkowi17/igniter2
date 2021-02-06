@@ -10,7 +10,7 @@ class Test_model extends CI_Model {
 
     public function get_last_three_movies()
 {
-    $config['hostname'] = 'localhost';
+    /*$config['hostname'] = 'localhost';
     $config['username'] = 'root';
     $config['password'] = '';
     $config['database'] = 'marcin_test';
@@ -21,9 +21,9 @@ class Test_model extends CI_Model {
     $config['cache_on'] = FALSE;
     $config['cachedir'] = '';
     $config['char_set'] = 'utf8';
-    $config['dbcollat'] = 'utf8_unicode_ci';
+    $config['dbcollat'] = 'utf8_unicode_ci';*/
     
-    $this->load->database($config);
+    $this->load->database();
 
         //$query = $this->db->get('movies', 4);
         $query = $this->db->get('movies');
@@ -32,7 +32,7 @@ class Test_model extends CI_Model {
 
 public function insert_movie($namefunc, $descriptionfunc, $category_idfunc, $yearfunc, $createdfunc)
         {
-            $config['hostname'] = 'localhost';
+            /*$config['hostname'] = 'localhost';
             $config['username'] = 'root';
             $config['password'] = '';
             $config['database'] = 'marcin_test';
@@ -43,9 +43,9 @@ public function insert_movie($namefunc, $descriptionfunc, $category_idfunc, $yea
             $config['cache_on'] = FALSE;
             $config['cachedir'] = '';
             $config['char_set'] = 'utf8';
-            $config['dbcollat'] = 'utf8_unicode_ci';
+            $config['dbcollat'] = 'utf8_unicode_ci';*/
             
-            $this->load->database($config);
+            $this->load->database();
 
                 //$this->name = $_POST['title']; // please read the below note
                 $this->name = $namefunc;
